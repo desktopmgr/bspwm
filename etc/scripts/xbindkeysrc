@@ -26,32 +26,27 @@
 # m:xxx + c:xxx
 # Shift+...
 
-
-
-
 keystate_numlock = enable
 #keystate_scrolllock = enable
 #keystate_capslock = enable
 
-
-
 # Play/Pause
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-   XF86AudioPlay
+XF86AudioPlay
 
 # Next
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-   XF86AudioNext
+XF86AudioNext
 
 # Previous
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-   XF86AudioPrev
+XF86AudioPrev
 
 # Stop
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
-   XF86AudioStop
-    # For the benefit of emacs users: -*- shell-script -*-
+XF86AudioStop
 
+# For the benefit of emacs users: -*- shell-script -*-
 #####Brightness up
 ####"kbdlight up"
 ####    m:0x0 + c:238
