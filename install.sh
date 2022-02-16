@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-APPNAME="bspwm"
-USER="${SUDO_USER:-${USER}}"
-HOME="${USER_HOME:-${HOME}}"
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#set opts
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ##@Version       : 020820212259-git
 # @Author        : Jason Hempstead
 # @Contact       : jason@casjaysdev.com
@@ -19,6 +12,13 @@ HOME="${USER_HOME:-${HOME}}"
 # @TODO          :
 # @Other         :
 # @Resource      :
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+APPNAME="bspwm"
+USER="${SUDO_USER:-${USER}}"
+HOME="${USER_HOME:-${HOME}}"
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#set opts
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Import functions
 CASJAYSDEVDIR="${CASJAYSDEVDIR:-/usr/local/share/CasjaysDev/scripts}"
@@ -78,8 +78,9 @@ show_optvars "$@"
 desktopmgr_run_init
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # end with a space
-APP="$APPNAME xsltproc fcitx screenfetch scrot screenkey xsettingsd sxhkd xdo catfish lxappearance qt5ct "
-APP+="xfce4-terminal xfce4-power-manager volumeicon xscreensaver conky tint2 xbindkeys firefox notify-send iwconfig "
+APP="$APPNAME xsltproc fcitx screenfetch scrot screenkey xsettingsd sxhkd xdo "
+APP+="catfish lxappearance qt5ct xfce4-terminal xfce4-power-manager volumeicon "
+APP+="xscreensaver conky tint2 xbindkeys firefox notify-send iwconfig "
 PERL=""
 PYTH=""
 PIPS=""
@@ -108,7 +109,7 @@ install_cpan "$CPAN"
 install_gem "$GEMS"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Other dependencies
-dotfilesreq git misc
+dotfilesreq
 dotfilesreqadmin
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Ensure directories exist
