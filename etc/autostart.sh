@@ -184,8 +184,8 @@ if __does_cmd_exist sxhkd run_sxhkd; then
   __silent_start run_sxhkd --start
 fi
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# Panel - not needed for awesome i3 qtile sway xmonad
-if ! __desktop_name "awesome" "i3" "qtile" "sway" "xmonad"; then
+# Panel - not needed for awesome bspwm i3 qtile sway xmonad
+if ! __desktop_name "awesome" "bspwm" "i3" "qtile" "sway" "xmonad"; then
   if [ -n "$DESKTOP_SESSION_PANEL_NAME" ] && __does_cmd_exist "$DESKTOP_SESSION_PANEL_NAME"; then
     __silent_kill "$DESKTOP_SESSION_PANEL_NAME"
     __silent_start "$DESKTOP_SESSION_PANEL_NAME"

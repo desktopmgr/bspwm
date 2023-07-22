@@ -1,5 +1,9 @@
 # simple X hotkey daemon - BSPWM Settings
 
+# Send to desktop
+super  {1-9,0}
+    bspc node -d '^{1-9,10}' --follow
+
 # close and kill
 super + {_,shift + }q
     bspc node -{c,k}
@@ -96,10 +100,6 @@ super + u
 # Make a windoww sticky/non-sticky
 super + o
     bspc node -g sticky={on,off}
-
-# remove and restore polybar
-#super + b
-#\{ pgrep polybar && \{ killall polybar ; bspc config top_padding 0 \} \} || \{ launch_polybar ; bspc config top_padding 24 \}
 
 super + {i,o}
     bspc node -f {prev,next}.local
