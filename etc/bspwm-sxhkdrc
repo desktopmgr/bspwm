@@ -1,5 +1,44 @@
 # simple X hotkey daemon - BSPWM Settings
 
+# Open terminal
+super + Return
+    myterminal
+
+# Open browser
+super + alt + b
+    mybrowser
+
+# Open file manager
+alt + r
+    myfilemanager
+
+# Lock screen
+super + alt + l
+    loginctl lock-session
+
+# Take a screenshot
+Print
+    screenshot-menu
+
+# Take screenshot of a selected region
+shift + Print
+    screenshot-menu region
+
+# Volume control
+XF86Audio{RaiseVolume,LowerVolume}
+    amixer sset Master 5%{+,-}
+
+XF86AudioMute
+    amixer sset Master toggle
+
+# Brightness control
+XF86MonBrightness{Up,Down}
+    xbacklight {-inc,-dec} 1
+
+# Logout menu
+super + alt + ctrl + l
+    logout-menu
+
 # Send to desktop
 super  {1-9,0}
     bspc node -d '^{1-9,10}' --follow
